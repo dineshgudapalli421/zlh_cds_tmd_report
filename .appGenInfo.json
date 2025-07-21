@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Jul 21 2025 22:09:27 GMT+0530 (India Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://sapsdvapp.aws.londonhydro.cloud:8000/sap/opu/odata/sap/ZC_DM_TMD_ATTR_CON_CDS",
+    "appName": "zlh_cds_tmd_report",
+    "appTitle": "TMD Attributes Reporting",
+    "appDescription": "TMD Attributes Reporting",
+    "appNamespace": "com.sap.lh.mr",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.0",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ZC_DM_TMD_ATTR_CON"
+      }
+    ],
+    "launchText": "In order to launch the generated app, simply run the following from the generated app root folder:\n\n```\n    npm start\n```"
+  }
+}
