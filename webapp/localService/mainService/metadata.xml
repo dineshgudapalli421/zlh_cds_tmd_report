@@ -38,17 +38,15 @@
                     <PropertyRef Name="operand"/>
                     <PropertyRef Name="vstelle"/>
                     <PropertyRef Name="adrnr"/>
-                    <PropertyRef Name="atwrt"/>
                     <PropertyRef Name="tplnr"/>
                     <PropertyRef Name="devloc"/>
                 </Key>
-                <Property Name="anlage" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Installation"/>
-                <Property Name="operand" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Operand"/>
-                <Property Name="vstelle" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Premise"/>
+                <Property Name="anlage" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Installation" sap:value-list="standard"/>
+                <Property Name="operand" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Operand" sap:value-list="standard"/>
+                <Property Name="vstelle" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Premise" sap:value-list="standard"/>
                 <Property Name="adrnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Address Number"/>
-                <Property Name="atwrt" Type="Edm.String" Nullable="false" MaxLength="70" sap:label="Characteristic Value"/>
                 <Property Name="tplnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Functional Location"/>
-                <Property Name="devloc" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Device Location"/>
+                <Property Name="devloc" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Device Location" sap:value-list="standard"/>
                 <Property Name="ab" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date From" sap:quickinfo="Date from which time slice is valid"/>
                 <Property Name="bis" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date To" sap:quickinfo="Date at Which a Time Slice Expires"/>
                 <Property Name="tariftyp" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Rate Category"/>
@@ -68,7 +66,7 @@
                 <Property Name="string2" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Second key field for operand value"/>
                 <Property Name="inst_text" Type="Edm.String" sap:label="Long Text"/>
                 <Property Name="i_devloc" Type="Edm.String" MaxLength="15" sap:label="Device Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="haus" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Connection Object"/>
+                <Property Name="haus" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Connection Object" sap:value-list="standard"/>
                 <Property Name="premise_loevm" Type="Edm.Boolean" sap:label="Deletion Indicator"/>
                 <Property Name="str_erg2" Type="Edm.String" MaxLength="40" sap:label="Street" sap:quickinfo="Street 3"/>
                 <Property Name="haus_num2" Type="Edm.String" MaxLength="10" sap:label="House number supplement"/>
@@ -83,8 +81,6 @@
                 <Property Name="region" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Region" sap:quickinfo="Region (State, Province, County)"/>
                 <Property Name="txt04" Type="Edm.String" MaxLength="4" sap:label="Individual status of an object" sap:quickinfo="Individual status of an object (short form)"/>
                 <Property Name="status" Type="Edm.String" MaxLength="4" sap:label="User Individual status of an object" sap:quickinfo="Individual status of an object (short form)"/>
-                <Property Name="atflv" Type="Edm.Double" sap:label="Internal floating point from"/>
-                <Property Name="atnam" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Characteristic Name"/>
                 <Property Name="stortzus" Type="Edm.String" MaxLength="30" sap:label="Addition to device location"/>
                 <Property Name="stort" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Location of maintenance object"/>
                 <Property Name="swerk" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Maintenance Plant"/>
@@ -95,16 +91,346 @@
                 <Property Name="addtxt3" Type="Edm.String" MaxLength="50" sap:label="Additional text for notes3" sap:quickinfo="Additional text for notes"/>
                 <Property Name="addtxt4" Type="Edm.String" MaxLength="50" sap:label="Additional text for notes4" sap:quickinfo="Additional text for notes"/>
                 <Property Name="addtxt5" Type="Edm.String" MaxLength="50" sap:label="Additional text for notes5" sap:quickinfo="Additional text for notes"/>
-                <Property Name="note_text" Type="Edm.String" MaxLength="50" sap:required-in-filter="false" sap:label="Note text"/>
-                <Property Name="devise_atwrt" Type="Edm.String" MaxLength="70" sap:label="Characteristic Value for device" sap:quickinfo="Characteristic Value"/>
-                <Property Name="devise_atflv" Type="Edm.Double" sap:label="Internal floating point from for device" sap:quickinfo="Internal floating point from"/>
-                <Property Name="devise_atnam" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Characteristic Name for Device" sap:quickinfo="Characteristic Name"/>
+                <Property Name="note_text" Type="Edm.String" MaxLength="50" sap:required-in-filter="false" sap:label="Note text" sap:value-list="standard"/>
                 <Property Name="co_longtext" Type="Edm.String" sap:label="Replicated Longtext" sap:quickinfo="Long Text"/>
+                <Property Name="objek" Type="Edm.String" MaxLength="90" sap:label="Connection Object" sap:quickinfo="Key of Object to be Classified"/>
+                <Property Name="Remote_loc_wtr_mtr" Type="Edm.String" MaxLength="70" sap:label="Remote location for wtr mtr" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Shut_off_loc_wtr_mtr" Type="Edm.String" MaxLength="70" sap:label="Shut off location for wtr mtr" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Walk_Sequence" Type="Edm.String" MaxLength="70" sap:label="Walk Sequence" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Paycode" Type="Edm.String" MaxLength="70" sap:label="Paycode" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Download_Block" Type="Edm.String" MaxLength="70" sap:label="Download Block" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Ring_Number" Type="Edm.String" MaxLength="70" sap:label="Ring Number" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Key_Number" Type="Edm.String" MaxLength="70" sap:label="Key Number" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Key_Type" Type="Edm.String" MaxLength="70" sap:label="Key Type" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Lock_Location" Type="Edm.String" MaxLength="70" sap:label="Lock Location" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Contact_Name" Type="Edm.String" MaxLength="70" sap:label="Contact Name" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Remarks" Type="Edm.String" MaxLength="70" sap:label="Remarks" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Phone_Number" Type="Edm.String" MaxLength="70" sap:label="Phone Number" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Trans_Loc_Ass" Type="Edm.String" MaxLength="70" sap:label="Transformer Location Assigned" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Plan_Number" Type="Edm.String" MaxLength="70" sap:label="Plan Number" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Block_Number" Type="Edm.String" MaxLength="70" sap:label="Block Number" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Lot_Number" Type="Edm.String" MaxLength="70" sap:label="Lot Number" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Property_Roll" Type="Edm.String" MaxLength="70" sap:label="Property Roll # (Parcel ID)" sap:quickinfo="Characteristic Value"/>
+            </EntityType>
+            <EntityType Name="ZI_DM_TMD_ATTR_INF11Type" sap:label="Value help for Installation Facts" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="operand"/>
+                </Key>
+                <Property Name="operand" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Operand"/>
+                <Property Name="text30" Type="Edm.String" MaxLength="30" sap:label="Text" sap:quickinfo="Text (30 Characters)"/>
+            </EntityType>
+            <EntityType Name="ZI_DM_TMD_ATTR_INF5Type" sap:label="Value help for Connection Object" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="haus"/>
+                    <PropertyRef Name="beber"/>
+                    <PropertyRef Name="txt04"/>
+                    <PropertyRef Name="status"/>
+                    <PropertyRef Name="city1"/>
+                    <PropertyRef Name="city2"/>
+                    <PropertyRef Name="post_code1"/>
+                    <PropertyRef Name="street"/>
+                    <PropertyRef Name="house_num1"/>
+                    <PropertyRef Name="region"/>
+                </Key>
+                <Property Name="haus" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Connection Object"/>
+                <Property Name="beber" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label="Plant Section"/>
+                <Property Name="txt04" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Status" sap:quickinfo="Individual status of an object (short form)"/>
+                <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Status" sap:quickinfo="Individual status of an object (short form)"/>
+                <Property Name="city1" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="City"/>
+                <Property Name="city2" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="District"/>
+                <Property Name="post_code1" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Postal Code" sap:quickinfo="City postal code"/>
+                <Property Name="street" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Street"/>
+                <Property Name="house_num1" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="House Number"/>
+                <Property Name="region" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label="Region" sap:quickinfo="Region (State, Province, County)"/>
+            </EntityType>
+            <EntityType Name="ZI_DM_TMD_ATTR_INF6Type" sap:label="Value help for Premise" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="vstelle"/>
+                </Key>
+                <Property Name="vstelle" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Premise"/>
+                <Property Name="loevm" Type="Edm.Boolean" sap:label="Deletion Indicator"/>
+                <Property Name="str_erg2" Type="Edm.String" MaxLength="40" sap:label="Street 3"/>
+                <Property Name="haus_num2" Type="Edm.String" MaxLength="10" sap:label="Supplement" sap:quickinfo="House number supplement"/>
+            </EntityType>
+            <EntityType Name="ZI_DM_TMD_ATTR_INF7Type" sap:label="Value help for Installation" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="anlage"/>
+                    <PropertyRef Name="loevm"/>
+                    <PropertyRef Name="sparte"/>
+                    <PropertyRef Name="anlart"/>
+                    <PropertyRef Name="ablesartst"/>
+                    <PropertyRef Name="ablsperr"/>
+                    <PropertyRef Name="ab"/>
+                    <PropertyRef Name="bis"/>
+                    <PropertyRef Name="ext_ui"/>
+                    <PropertyRef Name="tariftyp"/>
+                    <PropertyRef Name="ableinh"/>
+                    <PropertyRef Name="istype"/>
+                    <PropertyRef Name="branche"/>
+                </Key>
+                <Property Name="anlage" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Installation"/>
+                <Property Name="loevm" Type="Edm.Boolean" Nullable="false" sap:label="Deletion Indicator"/>
+                <Property Name="sparte" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:label="Division"/>
+                <Property Name="anlart" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Installation type"/>
+                <Property Name="ablesartst" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="UpperCase" sap:label="MR control" sap:quickinfo="Control of perm. number of cust. MRs and autom. estimations"/>
+                <Property Name="ablsperr" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:label="Blocking reason" sap:quickinfo="Reason for blocking meter reading"/>
+                <Property Name="ab" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Valid From" sap:quickinfo="Date from which time slice is valid"/>
+                <Property Name="bis" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Valid to" sap:quickinfo="Date at Which a Time Slice Expires"/>
+                <Property Name="ext_ui" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Point of Delivery ID"/>
+                <Property Name="tariftyp" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Rate Category"/>
+                <Property Name="ableinh" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="UpperCase" sap:label="Meter Reading Unit"/>
+                <Property Name="istype" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Industry System"/>
+                <Property Name="branche" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry"/>
+            </EntityType>
+            <EntityType Name="ZI_DM_TMD_ATTR_INF8Type" sap:label="Value help for Device Location" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="devloc"/>
+                    <PropertyRef Name="stortzus"/>
+                    <PropertyRef Name="txt04"/>
+                    <PropertyRef Name="status"/>
+                    <PropertyRef Name="stort"/>
+                    <PropertyRef Name="swerk"/>
+                </Key>
+                <Property Name="devloc" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Device Location"/>
+                <Property Name="stortzus" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Location addition" sap:quickinfo="Addition to device location"/>
+                <Property Name="txt04" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Status" sap:quickinfo="Individual status of an object (short form)"/>
+                <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Status" sap:quickinfo="Individual status of an object (short form)"/>
+                <Property Name="stort" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Location" sap:quickinfo="Location of maintenance object"/>
+                <Property Name="swerk" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Maintenance Plant"/>
+            </EntityType>
+            <EntityType Name="ZI_DM_TMD_ATTR_INF9Type" sap:label="Value help for Notes to MR" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="note_text"/>
+                    <PropertyRef Name="addtxt1"/>
+                    <PropertyRef Name="addtxt2"/>
+                    <PropertyRef Name="addtxt3"/>
+                    <PropertyRef Name="addtxt4"/>
+                    <PropertyRef Name="addtxt5"/>
+                </Key>
+                <Property Name="note_text" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Note text"/>
+                <Property Name="addtxt1" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Add. text for notes" sap:quickinfo="Additional text for notes"/>
+                <Property Name="addtxt2" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Add. text for notes" sap:quickinfo="Additional text for notes"/>
+                <Property Name="addtxt3" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Add. text for notes" sap:quickinfo="Additional text for notes"/>
+                <Property Name="addtxt4" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Add. text for notes" sap:quickinfo="Additional text for notes"/>
+                <Property Name="addtxt5" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Add. text for notes" sap:quickinfo="Additional text for notes"/>
             </EntityType>
             <EntityContainer Name="ZC_DM_TMD_ATTR_CON_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
                 <EntitySet Name="ZC_DM_TMD_ATTR_CON" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_DM_TMD_ATTR_INF11" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZI_DM_TMD_ATTR_INF11Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="ZI_DM_TMD_ATTR_INF5" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZI_DM_TMD_ATTR_INF5Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_DM_TMD_ATTR_INF6" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZI_DM_TMD_ATTR_INF6Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="ZI_DM_TMD_ATTR_INF7" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZI_DM_TMD_ATTR_INF7Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_DM_TMD_ATTR_INF8" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZI_DM_TMD_ATTR_INF8Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_DM_TMD_ATTR_INF9" EntityType="ZC_DM_TMD_ATTR_CON_CDS.ZI_DM_TMD_ATTR_INF9Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
             </EntityContainer>
             <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType/anlage" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help for Installation"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_DM_TMD_ATTR_INF7"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="anlage"/>
+                                    <PropertyValue Property="ValueListProperty" String="anlage"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="loevm"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="sparte"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="anlart"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ablesartst"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ablsperr"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ab"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="bis"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ext_ui"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="tariftyp"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ableinh"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="istype"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="branche"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType/operand" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help for Installation Facts"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_DM_TMD_ATTR_INF11"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="operand"/>
+                                    <PropertyValue Property="ValueListProperty" String="operand"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="text30"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType/vstelle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help for Premise"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_DM_TMD_ATTR_INF6"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="vstelle"/>
+                                    <PropertyValue Property="ValueListProperty" String="vstelle"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="loevm"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="str_erg2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="haus_num2"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType/devloc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help for Device Location"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_DM_TMD_ATTR_INF8"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="devloc"/>
+                                    <PropertyValue Property="ValueListProperty" String="devloc"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="stortzus"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="txt04"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="status"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="stort"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="swerk"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType/haus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help for Connection Object"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_DM_TMD_ATTR_INF5"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="haus"/>
+                                    <PropertyValue Property="ValueListProperty" String="haus"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="beber"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="txt04"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="status"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="city1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="city2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="post_code1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="street"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="house_num1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="region"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CONType/note_text" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help for Notes to MR"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_DM_TMD_ATTR_INF9"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="note_text"/>
+                                    <PropertyValue Property="ValueListProperty" String="note_text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="addtxt1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="addtxt2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="addtxt3"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="addtxt4"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="addtxt5"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
             <Annotations Target="ZC_DM_TMD_ATTR_CON_CDS.ZC_DM_TMD_ATTR_CON_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
             </Annotations>
