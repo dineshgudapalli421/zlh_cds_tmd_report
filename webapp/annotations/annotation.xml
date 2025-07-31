@@ -11,7 +11,6 @@
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
                         <PropertyPath>anlage</PropertyPath>
-                        <PropertyPath>operand</PropertyPath>
                         <PropertyPath>vstelle</PropertyPath>
                         <PropertyPath>devloc</PropertyPath>
                         <PropertyPath>haus</PropertyPath>
@@ -21,10 +20,13 @@
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="anlage"/>
+                            <PropertyValue Property="Value" Path="ins_ab"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="operand"/>
+                            <PropertyValue Property="Value" Path="ins_bis"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="anlage"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="vstelle"/>
@@ -37,12 +39,6 @@
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="devloc"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ab"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="bis"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="tariftyp"/>
@@ -75,24 +71,6 @@
                             <PropertyValue Property="Value" Path="ext_ui"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="fact_begda"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="fact_enda"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="wert1"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="string1"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="string2"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="inst_text"/>
-                        </Record>
-                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="i_devloc"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -106,9 +84,6 @@
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="haus_num2"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="prem_longtext"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="iloan"/>
@@ -174,25 +149,46 @@
                             <PropertyValue Property="Value" Path="note_text"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="co_longtext"/>
+                            <PropertyValue Property="Value" Path="con_obj_Property_Roll"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="objek"/>
+                            <PropertyValue Property="Value" Path="con_obj_Plan_Number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_Block_Number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_Lot_Number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_ring_number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_key_number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_key_type"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_lock_location"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_contact_name"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="con_obj_remarks"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ele_Phone_Number"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Remote_loc_wtr_mtr"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Shut_off_loc_wtr_mtr"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Walk_Sequence"/>
-                        </Record>
-                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Paycode"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Download_Block"/>
+                            <PropertyValue Property="Value" Path="ele_Trans_Loc_Ass"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Ring_Number"/>
@@ -213,22 +209,13 @@
                             <PropertyValue Property="Value" Path="Remarks"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Phone_Number"/>
+                            <PropertyValue Property="Value" Path="Shut_off_loc_wtr_mtr"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Trans_Loc_Ass"/>
+                            <PropertyValue Property="Value" Path="Walk_Sequence"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Plan_Number"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Block_Number"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Lot_Number"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Property_Roll"/>
+                            <PropertyValue Property="Value" Path="Download_Block"/>
                         </Record>
                     </Collection>
                 </Annotation>
