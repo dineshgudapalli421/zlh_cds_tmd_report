@@ -1,221 +1,222 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
     </edmx:Reference>
     <edmx:Reference Uri="/sap/opu/odata/sap/ZC_DM_TMD_ATTR_CON_CDS/$metadata">
-        <edmx:Include Namespace="ZC_DM_TMD_ATTR_CON_CDS" Alias="SAP"/>
+        <edmx:Include Namespace="ZC_DM_TMD_ATTR_CON_CDS" Alias="SAP" />
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
             <Annotations Target="SAP.ZC_DM_TMD_ATTR_CONType">
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
-                        <PropertyPath>anlage</PropertyPath>
-                        <PropertyPath>vstelle</PropertyPath>
-                        <PropertyPath>devloc</PropertyPath>
                         <PropertyPath>haus</PropertyPath>
-                        <PropertyPath>note_text</PropertyPath>
+                        <PropertyPath>vstelle</PropertyPath>
+                        <PropertyPath>anlage</PropertyPath>
+                        <PropertyPath>devloc</PropertyPath>
+                        <PropertyPath>ins_ab</PropertyPath>
+                        <PropertyPath>ins_bis</PropertyPath>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ins_ab"/>
+                            <PropertyValue Property="Value" Path="haus" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ins_bis"/>
+                            <PropertyValue Property="Value" Path="vstelle" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="anlage"/>
+                            <PropertyValue Property="Value" Path="anlage" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="vstelle"/>
+                            <PropertyValue Property="Value" Path="devloc" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="adrnr"/>
+                            <PropertyValue Property="Value" Path="ins_ab" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="tplnr"/>
+                            <PropertyValue Property="Value" Path="ins_bis" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="devloc"/>
+                            <PropertyValue Property="Value" Path="adrnr" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="tariftyp"/>
+                            <PropertyValue Property="Value" Path="tplnr" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ableinh"/>
+                            <PropertyValue Property="Value" Path="tariftyp" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="istype"/>
+                            <PropertyValue Property="Value" Path="ableinh" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="branche"/>
+                            <PropertyValue Property="Value" Path="istype" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="loevm"/>
+                            <PropertyValue Property="Value" Path="branche" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="sparte"/>
+                            <PropertyValue Property="Value" Path="loevm" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="anlart"/>
+                            <PropertyValue Property="Value" Path="sparte" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ablesartst"/>
+                            <PropertyValue Property="Value" Path="anlart" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ablsperr"/>
+                            <PropertyValue Property="Value" Path="ablesartst" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ext_ui"/>
+                            <PropertyValue Property="Value" Path="ablsperr" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="i_devloc"/>
+                            <PropertyValue Property="Value" Path="ext_ui" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="haus"/>
+                            <PropertyValue Property="Value" Path="i_devloc" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="premise_loevm"/>
+                            <PropertyValue Property="Value" Path="premise_loevm" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="str_erg2"/>
+                            <PropertyValue Property="Value" Path="str_erg2" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="haus_num2"/>
+                            <PropertyValue Property="Value" Path="haus_num2" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="iloan"/>
+                            <PropertyValue Property="Value" Path="iloan" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="beber"/>
+                            <PropertyValue Property="Value" Path="beber" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="city1"/>
+                            <PropertyValue Property="Value" Path="city1" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="city2"/>
+                            <PropertyValue Property="Value" Path="city2" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="post_code1"/>
+                            <PropertyValue Property="Value" Path="post_code1" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="street"/>
+                            <PropertyValue Property="Value" Path="street" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="house_num1"/>
+                            <PropertyValue Property="Value" Path="house_num1" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="region"/>
+                            <PropertyValue Property="Value" Path="region" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="txt04"/>
+                            <PropertyValue Property="Value" Path="txt04" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="status"/>
+                            <PropertyValue Property="Value" Path="status" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="stortzus"/>
+                            <PropertyValue Property="Value" Path="stortzus" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="stort"/>
+                            <PropertyValue Property="Value" Path="stort" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="swerk"/>
+                            <PropertyValue Property="Value" Path="swerk" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="devise_txt04"/>
+                            <PropertyValue Property="Value" Path="devise_txt04" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="devise_status"/>
+                            <PropertyValue Property="Value" Path="devise_status" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="addtxt1"/>
+                            <PropertyValue Property="Value" Path="addtxt1" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="addtxt2"/>
+                            <PropertyValue Property="Value" Path="addtxt2" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="addtxt3"/>
+                            <PropertyValue Property="Value" Path="addtxt3" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="addtxt4"/>
+                            <PropertyValue Property="Value" Path="addtxt4" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="addtxt5"/>
+                            <PropertyValue Property="Value" Path="addtxt5" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="note_text"/>
+                            <PropertyValue Property="Value" Path="note_text" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_Property_Roll"/>
+                            <PropertyValue Property="Value" Path="con_obj_Property_Roll" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_Plan_Number"/>
+                            <PropertyValue Property="Value" Path="con_obj_Plan_Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_Block_Number"/>
+                            <PropertyValue Property="Value" Path="con_obj_Block_Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_Lot_Number"/>
+                            <PropertyValue Property="Value" Path="con_obj_Lot_Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_ring_number"/>
+                            <PropertyValue Property="Value" Path="con_obj_ring_number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_key_number"/>
+                            <PropertyValue Property="Value" Path="con_obj_key_number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_key_type"/>
+                            <PropertyValue Property="Value" Path="con_obj_key_type" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_lock_location"/>
+                            <PropertyValue Property="Value" Path="con_obj_lock_location" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_contact_name"/>
+                            <PropertyValue Property="Value" Path="con_obj_contact_name" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="con_obj_remarks"/>
+                            <PropertyValue Property="Value" Path="con_obj_remarks" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ele_Phone_Number"/>
+                            <PropertyValue Property="Value" Path="ele_Phone_Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Remote_loc_wtr_mtr"/>
+                            <PropertyValue Property="Value" Path="Remote_loc_wtr_mtr" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Paycode"/>
+                            <PropertyValue Property="Value" Path="Paycode" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ele_Trans_Loc_Ass"/>
+                            <PropertyValue Property="Value" Path="ele_Trans_Loc_Ass" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Ring_Number"/>
+                            <PropertyValue Property="Value" Path="Ring_Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Key_Number"/>
+                            <PropertyValue Property="Value" Path="Key_Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Key_Type"/>
+                            <PropertyValue Property="Value" Path="Key_Type" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Lock_Location"/>
+                            <PropertyValue Property="Value" Path="Lock_Location" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Contact_Name"/>
+                            <PropertyValue Property="Value" Path="Contact_Name" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Remarks"/>
+                            <PropertyValue Property="Value" Path="Remarks" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Shut_off_loc_wtr_mtr"/>
+                            <PropertyValue Property="Value" Path="Shut_off_loc_wtr_mtr" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Walk_Sequence"/>
+                            <PropertyValue Property="Value" Path="Walk_Sequence" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Download_Block"/>
+                            <PropertyValue Property="Value" Path="Download_Block" />
                         </Record>
                     </Collection>
                 </Annotation>
