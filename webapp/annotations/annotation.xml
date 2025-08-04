@@ -15,7 +15,6 @@
                         <PropertyPath>anlage</PropertyPath>
                         <PropertyPath>devloc</PropertyPath>
                         <PropertyPath>ins_ab</PropertyPath>
-                        <PropertyPath>ins_bis</PropertyPath>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
